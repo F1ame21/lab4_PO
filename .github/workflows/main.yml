@@ -10,5 +10,9 @@ jobs:
     steps:
       - name: Git clone our repo
         uses: actions/checkout@v1
-      - name: List current folder
+      - name: docker version
         run: docker --version
+      - name: flask version
+        run: flask --version
+      - name: coverage version
+        run: coverage --version
