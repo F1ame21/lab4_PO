@@ -17,5 +17,5 @@ jobs:
       - name: Git clone our repo
         uses: actions/checkout@v1
       - name: Check out calc tests
-        run: python test.py
+        run: coverage run python test.py
 
