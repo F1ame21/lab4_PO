@@ -10,17 +10,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
       - name: Run and check
         run: python calculator.py
-      - name: Check out repository code
-        uses: actions/checkout@v1
-      - name: Check out calc tests
+      - name: Check out calculator tests
         run: python test.py
         
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: setup compiler
         run: pip install pyinstaller
       - name: compile to package
