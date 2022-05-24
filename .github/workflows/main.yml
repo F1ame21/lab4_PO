@@ -33,7 +33,7 @@ jobs:
         with:
           path: ..
 
-      - uses: F1ame21/upload-artifact@v2
+      - uses: actions/upload-artifact@v2
         with:
           name: my-app
           path: dist/windows
