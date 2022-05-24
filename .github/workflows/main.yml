@@ -29,5 +29,5 @@ jobs:
       - name: compile to package
         run: pyinstaller --version
       - name: compile to package
-        run: pyinstaller myscript.py
+        run: pyinstaller --onefile --icon=name.ico --noconsole calculator.py
 
