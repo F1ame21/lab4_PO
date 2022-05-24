@@ -29,7 +29,7 @@ jobs:
       - name: compile to package
         run: pyinstaller --version
       - name: compile to package
-        run: pyinstaller calculator.py  --noconfirm --onefile --console
+        run: pyinstaller calculator.py  --onefile --console
       - name: setup git config
         run: |
           git config user.name "GitHub Actions Bot"
@@ -38,7 +38,6 @@ jobs:
       - name: Commit files
         run: |
             git add dist/calculator.exe
-            git add build/calculator
             git commit -a -m 'Changes pushed by GitHub Actions' || true
             git push origin master
 
