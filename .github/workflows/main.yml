@@ -10,12 +10,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Run and check
+        run: python main.py
       - name: Check out repository code
         uses: actions/checkout@v1
       - name: Check out calc tests
         run: python test.py
-      - name: Check out repository code
-        run: mvn -B clean
         
   build:
     runs-on: ubuntu-latest
