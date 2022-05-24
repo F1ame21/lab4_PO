@@ -28,5 +28,6 @@ jobs:
         run: pip install pyinstaller
       - name: compile to package
         run: pyinstaller --version
-
+      - name: compile to package
+        run: python --version
 
