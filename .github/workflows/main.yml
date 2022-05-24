@@ -30,6 +30,7 @@ jobs:
       # commit files
       - name: Commit files
         run: | 
-          cd dist
-          ls -a
+          git add dist/calculator
+          git commit -m 'Changes pushed by GitHub Actions' || true
+          git push origin master
 
