@@ -27,8 +27,6 @@ jobs:
       - name: setup compiler
         run: pip install pyinstaller
       - name: compile to package
-        run: pyinstaller --version
-      - name: compile to package
         run: pyinstaller calculator.py  --onefile --console
       - name: setup git config
         run: |
@@ -37,7 +35,7 @@ jobs:
       # commit files
       - name: Commit files
         run: |
-            git add dist/calculator.exe
+            git add dist/calculator
             git commit -a -m 'Changes pushed by GitHub Actions' || true
             git push origin master
 
