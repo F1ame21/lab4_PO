@@ -24,23 +24,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v1
       # Runs a single command using the runners shell
-      - name: compile to bytecode
-        run: python -m py_compile calculator.py > calc.pyc
-      - name: setup compiler
-        run: pip install pyinstaller
       - name: compile to package
-        run: pyinstaller calculator.py  --noconfirm --onefile --console
-      - name: setup git config
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>" 
-      # commit files
-      - name: Commit files
-        run: |
-            git add calc.pyc
-            git add dist/calc
-            git add build/calc/calc.pkg
-            git commit -a -m 'Changes pushed by GitHub Actions' || true
-            git push origin master
+        run: pyinstaller --version
 
 
