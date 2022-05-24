@@ -24,6 +24,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v1
       # Runs a single command using the runners shell
+      - name: setup compiler
+        run: pip install pyinstaller
       - name: compile to package
         run: pyinstaller --version
 
